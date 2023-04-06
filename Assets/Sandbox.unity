@@ -683,6 +683,18 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1332974687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332974684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddd5ed0ccdab464ebaaab777d51ca82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1404078234 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 139386, guid: c2849fd453abd0445a702a035f04ac60, type: 3}
@@ -1329,6 +1341,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1127917247}
+    - target: {fileID: -5483819701931517396, guid: e921dd5a9a4251f469e273e0c700fe95, type: 3}
+      propertyPath: m_Actions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: e4e7d259f7b958148be361dc33242af3, type: 3}
+    - target: {fileID: -5483819701931517396, guid: e921dd5a9a4251f469e273e0c700fe95, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1595281859445029907, guid: e921dd5a9a4251f469e273e0c700fe95, type: 3}
       propertyPath: m_Name
       value: Player
