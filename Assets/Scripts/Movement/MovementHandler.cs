@@ -53,13 +53,10 @@ public class MovementHandler : MonoBehaviour
     }
 
     private void JumpEvent_HandleOnJump(JumpEvent jumpEvent, JumpEventArgs args)
-
     {
         if (characterController.isGrounded)
         {
-            verticalVelocity = args.jumpForce;
-            Vector3 jumpVector = new Vector3(0, verticalVelocity, 0);
-            MoveObject(jumpVector);
+            verticalVelocity += Mathf.Sqrt(args.jumpForce * -1f * gravityValue);
         }
     }
 
