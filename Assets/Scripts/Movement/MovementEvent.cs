@@ -1,7 +1,7 @@
 using System;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class MovementEvent : MonoBehaviour
 {
@@ -9,7 +9,6 @@ public class MovementEvent : MonoBehaviour
 
     public void CallMovementEvent(Vector3 moveDirection, float moveSpeed)
     {
-        Debug.Log("CallMovementEvent" + moveDirection);
 
         OnMovement?.Invoke(this, new MovementEventArgs()
         {

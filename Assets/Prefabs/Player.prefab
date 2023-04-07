@@ -13,13 +13,13 @@ GameObject:
   - component: {fileID: 1669898341091405135}
   - component: {fileID: 5490766002671555766}
   - component: {fileID: -5483819701931517396}
-  - component: {fileID: 1332974685}
   - component: {fileID: 1332974686}
   - component: {fileID: 1332974687}
   - component: {fileID: 4552635025749296208}
   - component: {fileID: 1517655683975275511}
   - component: {fileID: 8104574991829404952}
   - component: {fileID: -3501171345629743747}
+  - component: {fileID: 1633395084807176695}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -36,7 +36,7 @@ Transform:
   m_GameObject: {fileID: 1595281859445029907}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -168,19 +168,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &1332974685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1595281859445029907}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8db955d66536454cb228d4c451ba7dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!195 &1332974686
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -217,6 +204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerControl: {fileID: 0}
   movementEvent: {fileID: 0}
+  jumpEvent: {fileID: 0}
   movementHandler: {fileID: 0}
 --- !u!114 &4552635025749296208
 MonoBehaviour:
@@ -230,8 +218,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 633f59e4880d95942835c2c537ce6d73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementEvent: {fileID: 1517655683975275511}
-  moveSpeed: 5
+  moveSpeed: 6
+  jumpForce: 0.15
 --- !u!114 &1517655683975275511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,6 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e00aa74d3b8d7c4084e0e7d26d06dff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravity: -1
 --- !u!143 &-3501171345629743747
 CharacterController:
   m_ObjectHideFlags: 0
@@ -274,3 +263,15 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1633395084807176695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595281859445029907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8f65e9ad9265e4eb70f295d37f6df2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

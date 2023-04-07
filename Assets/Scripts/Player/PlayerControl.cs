@@ -1,24 +1,28 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
+using System.Collections.Generic;
 
+[RequireComponent(typeof(Player))]
+[DisallowMultipleComponent]
 public class PlayerControl : MonoBehaviour
 {
-    public MovementEvent movementEvent;
-    public float moveSpeed = 5f;
-    public event System.Action OnJumpInput;
+    private Player player;
+    [SerializeField] private float moveSpeed = 7f;
+    [SerializeField] float jumpForce = 0.14f;
 
     private Vector3 moveDirection = Vector3.zero;
 
     private void Awake()
     {
-        movementEvent = GetComponent<MovementEvent>();
+        player = GetComponent<Player>();
     }
 
     private void Update()
     {
         if (moveDirection != Vector3.zero)
         {
-            movementEvent.CallMovementEvent(moveDirection, moveSpeed);
+            player.movementEvent.CallMovementEvent(moveDirection, moveSpeed);
         }
     }
 
@@ -30,9 +34,9 @@ public class PlayerControl : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        // if (context.performed)
-        // {
-        //     OnJumpInput?.Invoke();
-        // }
+        if (context.performed)
+        {
+            player.jumpEvent.CallJumpEvent(jumpForce);
+        }
     }
 }
