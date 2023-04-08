@@ -543,8 +543,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 10
-  far clip plane: 60
+  near clip plane: 5
+  far clip plane: 80
   field of view: 40
   orthographic: 0
   orthographic size: 5
@@ -718,8 +718,8 @@ MonoBehaviour:
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 5
-    NearClipPlane: 10
-    FarClipPlane: 60
+    NearClipPlane: 5
+    FarClipPlane: 80
     Dutch: 0
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
@@ -1542,11 +1542,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4552635025749296208, guid: e921dd5a9a4251f469e273e0c700fe95, type: 3}
       propertyPath: jumpForce
-      value: 24
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8104574991829404952, guid: e921dd5a9a4251f469e273e0c700fe95, type: 3}
       propertyPath: gravity
-      value: -9.8
+      value: -20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e921dd5a9a4251f469e273e0c700fe95, type: 3}
