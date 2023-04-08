@@ -24,6 +24,7 @@ public class PlayerControl : MonoBehaviour
         {
             player.movementEvent.CallMovementEvent(moveDirection, moveSpeed);
         }
+
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -36,6 +37,7 @@ public class PlayerControl : MonoBehaviour
     {
         if (context.performed)
         {
+            Debug.Log("OnJump");
             player.jumpEvent.CallJumpEvent(jumpForce);
         }
     }
