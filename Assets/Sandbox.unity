@@ -189,6 +189,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 413494, guid: c2849fd453abd0445a702a035f04ac60, type: 3}
   m_PrefabInstance: {fileID: 207938331}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &443160916 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1595281859445029907, guid: e921dd5a9a4251f469e273e0c700fe95, type: 3}
+  m_PrefabInstance: {fileID: 5423819392448733272}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &478657705
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,7 +548,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 5
+  near clip plane: 10
   far clip plane: 80
   field of view: 40
   orthographic: 0
@@ -718,7 +723,7 @@ MonoBehaviour:
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 5
-    NearClipPlane: 5
+    NearClipPlane: 10
     FarClipPlane: 80
     Dutch: 0
     ModeOverride: 0
@@ -1380,6 +1385,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3019496638743647415, guid: e921dd5a9a4251f469e273e0c700fe95, type: 3}
   m_PrefabInstance: {fileID: 5423819392448733272}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &3984362554866646435
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443160916}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: d288a0e4a2d923b46898986e979da643, type: 3}
+  m_Controller: {fileID: 9100000, guid: 77e4e7f5e416b5b4a940213b91c980b8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &5423819392448733272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1459,5 +1484,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7450914922857121063, guid: e921dd5a9a4251f469e273e0c700fe95, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e921dd5a9a4251f469e273e0c700fe95, type: 3}
