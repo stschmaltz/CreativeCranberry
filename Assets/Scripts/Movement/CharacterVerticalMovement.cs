@@ -46,7 +46,7 @@ public class CharacterVerticalMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!IsPlayerGrounded())
+        if (!characterController.isGrounded)
         {
             verticalSpeed += gravity * 10f * Time.fixedDeltaTime;
         }
