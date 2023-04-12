@@ -3,6 +3,8 @@ using UnityEngine;
 public class CharacterHorizontalMovement : MonoBehaviour
 {
     [SerializeField] private MovementEvent movementEvent;
+    [SerializeField] private float rotationSpeed = 5f;
+
     public Vector3 HorizontalMovement { get; private set; }
 
     void OnEnable()

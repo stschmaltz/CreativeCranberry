@@ -18,7 +18,7 @@ public class PlayerControl : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        Vector2 input = context.ReadValue<Vector2>().normalized;
+        Vector2 input = context.ReadValue<Vector2>();
         Vector3 moveDirection = new Vector3(input.x, 0, input.y);
 
         if (moveDirection != Vector3.zero)
