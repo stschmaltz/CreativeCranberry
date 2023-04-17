@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 5622686437818248515}
   - component: {fileID: 5030868515413168324}
   - component: {fileID: 3984362554866646435}
+  - component: {fileID: 570822087051867510}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -190,6 +191,7 @@ MonoBehaviour:
   characterController: {fileID: -3501171345629743747}
   playerHorizontalMovement: {fileID: 5622686437818248515}
   playerVerticalMovement: {fileID: 5030868515413168324}
+  attackEvent: {fileID: 0}
 --- !u!114 &4552635025749296208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,7 +285,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementEvent: {fileID: 1517655683975275511}
-  rotationSpeed: 5
 --- !u!114 &5030868515413168324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,6 +321,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &570822087051867510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595281859445029907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8683a0c84cd10ce46a34f4b8e091f474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7450914922849848483
 PrefabInstance:
   m_ObjectHideFlags: 0

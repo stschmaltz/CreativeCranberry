@@ -1,6 +1,10 @@
 using UnityEngine;
 using UnityEngine.AI;
 
+
+
+[RequireComponent(typeof(MovementEvent))]
+[RequireComponent(typeof(Animator))]
 [DisallowMultipleComponent]
 public class AnimationHandler : MonoBehaviour
 {
@@ -9,18 +13,18 @@ public class AnimationHandler : MonoBehaviour
     private Animator animator;
     private void Awake()
     {
-        player = GetComponent<Player>();
         animator = GetComponent<Animator>();
+        movementEvent = GetComponent<MovementEvent>();
     }
 
     private void OnEnable()
     {
-        player.movementEvent.OnMovement += MovementEvent_AnimateMovement;
+        movementEvent.OnMovement += MovementEvent_AnimateMovement;
     }
 
     private void OnDisable()
     {
-        player.movementEvent.OnMovement -= MovementEvent_AnimateMovement;
+        movementEvent.OnMovement -= MovementEvent_AnimateMovement;
     }
 
     private void MovementEvent_AnimateMovement(MovementEvent movementEvent, MovementEventArgs args)

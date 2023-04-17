@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerControl))]
@@ -8,6 +7,9 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterMovementHandler))]
 [RequireComponent(typeof(CharacterHorizontalMovement))]
 [RequireComponent(typeof(CharacterVerticalMovement))]
+[RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(AttackEvent))]
+[DisallowMultipleComponent]
 public class Player : MonoBehaviour
 {
     [HideInInspector] public PlayerControl playerControl;
@@ -17,6 +19,7 @@ public class Player : MonoBehaviour
     [HideInInspector] public CharacterController characterController;
     [HideInInspector] public CharacterHorizontalMovement playerHorizontalMovement;
     [HideInInspector] public CharacterVerticalMovement playerVerticalMovement;
+    [HideInInspector] public AttackEvent attackEvent;
 
     // Awake is called when the script instance is being loaded
     void Awake()
@@ -28,5 +31,6 @@ public class Player : MonoBehaviour
         movementEvent = GetComponent<MovementEvent>();
         jumpEvent = GetComponent<JumpEvent>();
         characterController = GetComponent<CharacterController>();
+        attackEvent = GetComponent<AttackEvent>();
     }
 }

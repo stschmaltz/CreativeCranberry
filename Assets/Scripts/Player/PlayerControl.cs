@@ -38,4 +38,13 @@ public class PlayerControl : MonoBehaviour
             player.jumpEvent.CallJumpEvent();
         }
     }
+
+    public void onAttackTriggered(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Debug.Log("lets go");
+            player.attackEvent.CallAttackEvent();
+        }
+    }
 }
